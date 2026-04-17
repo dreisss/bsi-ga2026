@@ -1,0 +1,278 @@
+\documentclass[
+  12pt,
+  openright,
+  a4paper,
+  twoside,
+  english,
+  brazil,
+]{article}
+
+\usepackage{gensymb}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{enumerate}
+
+\newcommand{\cqd}{\hfill $\square$}
+
+% -----------------------------------------------------------------------------
+
+\title{Geometria Analítica - Lista 02}
+\author{Prof. Helaine - 16/04/2026}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}[\bfseries  1.]
+    % 01
+  \item Dados os vetores $\vec u = (4,\alpha, -1)$ e
+    $\vec v =(\alpha,2,3)$ e os pontos $A=(4,-1,2)$ e $B=(3,2,-1)$,
+    determinar o valor de $\alpha$ tal que: $\vec u\cdot(\vec
+    v+\overrightarrow{BA})=5$.
+
+    $$
+    (4,\alpha,-1)\cdot ((4,-1,2)+((4,-1,2)-(3,2,-1)))=5
+    $$
+    $$
+    (4,\alpha,-1)\cdot ((4,-1,2)+(1,-3,3))=5
+    $$
+    $$
+    (4,\alpha,-1)\cdot (5,-4,5)=5
+    $$
+    $$
+    4\cdot 5 + \alpha\cdot (-4) + -1\cdot 5=5
+    $$
+    $$
+    20 -4\alpha -5=5
+    $$
+    $$
+    -4\alpha=5-15\implies \alpha=\frac{-10}{-4}=\frac{5}{2}
+    $$
+
+    % 02
+  \item Sabendo que a distância entre os pontos $A=(-1,2,3)$ e
+    $B=(1,-1,m)$ é $7$. Calcular $m$.
+
+    $$
+    d(A,B)=\sqrt{(1-(-1))^2+(2-(-1))^2+(3-m)^2}=7
+    $$
+    $$
+    2^2+3^2+(3-m)^2=49
+    $$
+    $$
+    (3-m)^2=49-4-9
+    $$
+    $$
+    3-m=\pm\sqrt{36}\implies m=3\pm6\implies m=
+    \begin{cases}
+      9\\
+      -3
+    \end{cases}
+    $$
+
+    % 03
+  \item Determinar $\alpha$ para que o vetor $\vec v=(\alpha,-\frac 1
+    2, \frac 1 4)$ seja unitário.
+
+    $$
+    ||\vec v||=1\implies \sqrt{\alpha^2+(-\frac 1 2)^2+(\frac 1 4)^2}=1
+    $$
+    $$
+    \alpha^2+(-\frac 1 2)^2+(\frac 1 4)^2=1
+    $$
+    $$
+    \alpha^2=1-\frac 1 4-\frac 1 {16}
+    $$
+    $$
+    \alpha^2=\frac{16}{16}-\frac{4}{16}-\frac 1 {16}
+    $$
+    $$
+    \alpha^2=\frac{11}{16}\implies \alpha=\pm \frac{\sqrt{11}}{4}
+    $$
+
+    % 04
+  \item Calcular o ângulo entre os vetores $\vec u = (1,1,4)$ e $\vec
+    v=(-1,2,2)$.
+
+    $$
+    ||\vec u||=\sqrt{1^2+1^2+4^2}=\sqrt{18}=3\sqrt{2}
+    $$
+    $$
+    ||\vec v||=\sqrt{(-1)^2+2^2+2^2}=\sqrt{9}=3
+    $$
+
+    $$
+    (1,1,4)\cdot(-1,2,2)=(3\sqrt{2})\cdot(3)\cdot \cos(\theta)
+    $$
+    $$
+    1\cdot(-1)+1\cdot 2+4\cdot 2=(3\sqrt{2})\cdot(3)\cdot \cos(\theta)
+    $$
+    $$
+    -1+2+8=(3\sqrt{2})\cdot(3)\cdot \cos(\theta)
+    $$
+    $$
+    \cos(\theta)=\frac{9}{3\cdot
+    3\sqrt{2}}=\frac{1}{\sqrt{2}}=\frac{\sqrt 2}{2}\implies \theta=45\degree
+    $$
+
+    % 05
+  \item Sabendo que o vetor $\vec v = (2,1,-1)$ forma um ângulo de
+    $60\degree$ com o vetor $\overrightarrow{AB}$ determinado pelos pontos
+    $A=(3,1,-2)$ e $B=(4,0,m)$. Calcular $m$.
+
+    $$
+    ||\vec v||=\sqrt{2^2+1^2+(-1)^2}=\sqrt{6}
+    $$
+    $$
+    \overrightarrow{AB}=(4-3,0-1,m-(-2))=(1,-1,m+2)
+    $$
+    $$
+    ||\overrightarrow{AB}||=\sqrt{1^2+(-1)^2+(m+2)^2}=\sqrt{2+(m+2)^2}
+    $$
+
+    $$
+    (2,1,-1)\cdot(1,-1,m+2)=(\sqrt 6)\cdot(\sqrt{2+(m+2)^2})\cdot
+    \cos(60\degree)
+    $$
+    $$
+    2\cdot 1+1\cdot(-1)+(-1)\cdot(m+2)=(\sqrt
+    6)\cdot(\sqrt{2+(m+2)^2})\cdot \frac 1 2
+    $$
+    $$
+    2\cdot(2-1-m-2)=(\sqrt6)\cdot(\sqrt{2+(m+2)^2})
+    $$
+    $$
+    -2(m + 1)=(\sqrt6)\cdot(\sqrt{2+(m+2)^2})
+    $$
+    $$
+    4(m + 1)^2=6\cdot(2+(m+2)^2)
+    $$
+    $$
+    4m^2+8m+4=12+6m^2+6\cdot 4m+6\cdot 4
+    $$
+    $$
+    m^2+8m+16=0\implies m=-4
+    $$
+
+    % 06
+  \item Determinar os ângulos internos do triângulo $ABC$, sendo
+    $A=(3,-3,3)$ e $B=(2,-1,2)$ e $C=(1,0,2)$.
+
+    $$
+    \overrightarrow{AB}=(2-3,-1-(-3),2-3)=(-1,2,-1)
+    $$
+    $$
+    \overrightarrow{AC}=(1-3,0-(-3),2-3)=(-2,3,-1)
+    $$
+    $$
+    \overrightarrow{BC}=(1-2,0-(-1),2-2)=(-1,1,0)
+    $$
+    $$
+    ||\overrightarrow{AB}||=\sqrt{(-1)^2+2^2+(-1)^2}=\sqrt 6
+    $$
+    $$
+    ||\overrightarrow{AC}||=\sqrt{(-2)^2+3^2+(-1)^2}=\sqrt{14}
+    $$
+    $$
+    ||\overrightarrow{BC}||=\sqrt{(-1)^2+1^2+0^2}=\sqrt{2}
+    $$
+
+    $$
+    \theta_1= B\hat AC \implies
+    \cos(\theta_1)=\frac{(-1,2,-1)\cdot(-2,3,-1)}{\sqrt{6\cdot 14}}
+    $$
+    $$
+    \cos(\theta_1)=\frac{(-1)(-2)+2\cdot
+    3+(-1)(-1)}{2\sqrt{21}}=\frac{9}{2\sqrt{21}}\implies \theta_1=10.89\degree
+    $$
+
+    $$
+    \theta_2=A\hat BC\implies \cos(\theta_2)=\frac{-(-1,2,-1)\cdot
+    (-1,1,0)}{\sqrt{6 \cdot 2}}
+    $$
+    $$
+    \cos(\theta_2)=\frac{(1,-2,1)\cdot(-1,1,0)}{\sqrt{6 \cdot
+    2}}=\frac{1\cdot(-1)+(-2)\cdot 1+1\cdot 0}{2\sqrt 3}
+    $$
+    $$
+    \cos(\theta_2)=-\frac{3}{2\sqrt 3}\implies \theta_2=150\degree
+    $$
+
+    $$
+    \theta_1+\theta_2+\theta_3=180\degree\implies \theta_3=19.11\degree
+    $$
+
+    % 07
+  \item Provar que o triângulo de vértices $A=(2,3,1)$ e $B=(2,1,-1)$
+    e $C=(2,2,-2)$ é um triâgulo retângulo.
+
+    $$
+    \overrightarrow{AB}=(2-2,1-3,-1-1)=(0,-2,-2)
+    $$
+    $$
+    \overrightarrow{AC}=(2-2,2-3,-2-1)=(0,-1,-3)
+    $$
+    $$
+    \overrightarrow{BC}=(2-2,2-1,-2-(-1))=(0,1,-1)
+    $$
+    $$
+    ||\overrightarrow{AB}||=\sqrt{0^2+(-2)^2+(-2)^2}=2\sqrt{2}
+    $$
+    $$
+    ||\overrightarrow{AC}||=\sqrt{0^2+(-1)^2+(-3)^2}=\sqrt{10}
+    $$
+    $$
+    ||\overrightarrow{BC}||=\sqrt{0^2+1^2+(-1)^2}=\sqrt{2}
+    $$
+
+    $$
+    \theta_1=B\hat AC\implies \cos(\theta_1)=\frac{0\cdot
+    0+(-2)(-1)+(-2)(-3)}{2\sqrt 2\cdot \sqrt{10}}
+    $$
+    $$
+    \cos(\theta_1)=\frac{8}{4\sqrt 5}=\frac{2}{\sqrt 5}\implies
+    \theta_1=26.56\degree
+    $$
+
+    $$
+    \theta_2=A\hat BC\implies \cos(\theta_2)=\frac{-(0,-2,-2)\cdot
+    (0,1,-1)}{2\sqrt 2\cdot\sqrt 2}
+    $$
+    $$
+    \cos(\theta_2)=\frac{0\cdot0+2\cdot1+2\cdot(-1)}{4}=0\implies
+    \theta_2=90\degree
+    $$
+
+    % 08
+  \item Determinar um vetor ortogonal aos vetores $\vec v_1=(1,-1,0)$
+    e $\vec v_2=(1,0,1)$.
+
+    $$
+    \vec u =(x,y,z)
+    $$
+    $$
+    (x,y,z)\cdot(1,-1,0)=0
+    $$
+    $$
+    (x,y,z)\cdot(1,0,1)=0
+    $$
+
+    $$
+    \begin{cases}
+      x-y+z\cdot0=0\\
+      x+y\cdot0+z=0
+    \end{cases}\implies x = y\text{ e }z=-x
+    \implies \vec u=(1,1,-1)\text{, por exemplo}
+    $$
+
+\end{enumerate}
+
+\end{document}
