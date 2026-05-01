@@ -1,0 +1,77 @@
+\documentclass[
+  12pt,
+  openright,
+  a4paper,
+  twoside,
+  english,
+  brazil,
+]{article}
+
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{enumerate}
+
+\newcommand{\cqd}{\hfill $\square$}
+\newcommand{\dt}[1]{
+  \begin{vmatrix}#1
+\end{vmatrix}}
+
+% -----------------------------------------------------------------------------
+
+\title{Geometria Analítica - Lista 03}
+\author{Prof. Helaine - 30/04/2026}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}[\bfseries  1.]
+  \item Determinar um vetor unitário simultaneamente ortogonal aos
+    vetores $\vec u=(2,-6,3)$ e $\vec v=(4,3,1)$.
+
+    $$\vec w=\frac{\vec u\times\vec v}{\|\vec u\times \vec v\|}$$
+    $$\vec u\times\vec
+    v=(\dt{-6 & 3\\3 & 1},-\dt{2 & 3\\4 & 1},\dt{2 & -6\\4 &
+    3})=(-15,10,30)=5(-3,2,6)
+    $$
+    $$\|\vec u\times\vec v|=\sqrt{15^2+10^2+30^2}=\sqrt{1225}=35$$
+    $$\vec w=\frac{1}{7}(-3,2,6)$$
+
+  \item Dados os vetores $\vec u=(1,2,-1)$ e $\vec v=(0,-1,3)$,
+    calcular a área do paralelogramo determinado pelos vetores $3\vec
+    u$ e $\vec v-\vec u$.
+
+    $$A=\|\vec u\times \vec v\|$$
+    $$\vec v-\vec u=(0-1,-1-2,3-(-1))=(-1,-3,4)$$
+    $$3\vec u\times\vec (\vec v-\vec u)=3(\dt{2 & -1\\-3 & 4}, -\dt{1
+    & -1\\-1 & 4}, \dt{1 & 2\\-1 & -3})=3(5,-3,-1)$$
+    $$A=3\sqrt{5^2+3^2+1^2}=3\sqrt{35}$$
+
+  \item Sejam os vetores $\vec u=(3,1,-1)$ e $\vec v = (a,0,2)$.
+    Calcular o valor de $a$ para que a área do paralelogramo
+    determinado por $\vec u$ e $\vec v$ seja igual a $2\sqrt 6$.
+
+    $$
+    \vec u\times\vec v=(\dt{1 & -1\\0 & 2}, -\dt{3 & -1\\a & 2}, \dt{3
+    & 1\\a & 0})=(2,-(6+a),-a)
+    $$
+    $$\|\vec u\times\vec v\|=\sqrt{2^2+(6+a)^2+(-a)^2}=2\sqrt{6}$$
+    $$4+(6+a-a)^2-2(6+a)(-a)=4\cdot 6$$
+    $$4+36+12a+2a^2-24=0$$
+    $$2a^2+12a+16=0$$
+    $$a^2+6a+8=0$$
+    $$a=
+    \begin{cases}-2\\-4
+    \end{cases}$$
+
+\end{enumerate}
+
+\end{document}
